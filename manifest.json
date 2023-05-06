@@ -1,7 +1,7 @@
 {
   "name": "Timer",
   "description": "A simple timer",
-  "version": "1.7",
+  "version": "1.8",
   "manifest_version": 3,
   "permissions": ["activeTab", "scripting", "background", "tabs"],
   "background": {
@@ -9,6 +9,6 @@
   },  
   "action": {
     "default_popup": "index.html",
-    "default_icon": "/1219518.png"
+    "default_icon": "3eab57da-d241-4a05-afb9-2719a6f8880e-removebg-preview.png"
   }
 }
