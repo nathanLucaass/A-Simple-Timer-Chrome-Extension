@@ -1,10 +1,14 @@
 {
-  "name": "Counter",
-  "description": "A simple counter",
-  "version": "1.0",
+  "name": "Timer",
+  "description": "A simple timer",
+  "version": "1.5",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "background"],
+  "background": {
+    "service_worker": "background.js"
+  },  
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "index.html",
+    "default_icon": "/1219518.png"
   }
 }

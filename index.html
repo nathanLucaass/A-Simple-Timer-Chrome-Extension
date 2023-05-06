@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
   <form action="">
     <label for="">
-      <input type="number" placeholder="HH:MM:SS" maxlength="8" id="time-value">
-      <button id="btn">Start</button>
+    <div id="inputs">
+      <input type="number" placeholder="HH"  id="hours-value" >
+      <input type="number" placeholder="MM"  id="minutes-value" max="59">
+      <input type="number" placeholder="SS"  id="seconds-value" max="59">
+    </div>
+      <button id="start-button">Start</button>
     </label>
   </form>
-  <span id="countdown"></span>
+  <span id="countdown">00:00:00</span>
 </body>
-<script src="script.js"></script>
+<script src="popup.js"></script>
 </html>
