@@ -1,9 +1,9 @@
 {
   "name": "Timer",
   "description": "A simple timer",
-  "version": "1.5",
+  "version": "1.7",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting", "background"],
+  "permissions": ["activeTab", "scripting", "background", "tabs"],
   "background": {
     "service_worker": "background.js"
   },  

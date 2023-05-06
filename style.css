@@ -1,5 +1,9 @@
+@import url(https://allfont.net/allfont.css?fonts=digital-7);
+
 body{
   text-align: center;
+  font-family: 'Digital-7', arial;
+  background-color: black;
 }
 
 label{
@@ -9,15 +13,16 @@ label{
 input{
   margin: 1px;
   text-align: right;
-  border-radius: 10px;
   size: 30px;
   border: 0 none;
-  background-color: #D9D9D91A;
-  width: 50px;
-  height: 48px;
+  background-color: black;
+  width: 30px;
+  height: 20px;
   font-size: large;
   text-align: right;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Digital-7', arial;
+  color: greenyellow;
 }
 
 label{
@@ -29,6 +34,7 @@ label{
   display: flex;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 button{
@@ -36,9 +42,9 @@ button{
   font-size: 20px;
   border-radius: 10px;
   cursor: pointer;
-  width: 171px;
-  height: 48px;
-  color: #373737;
+  width: 70px;
+  height: 30px;
+  color: greenyellow;
   font-weight: 700px;
   font-size: 20px;
   line-height: 26px;
@@ -47,8 +53,22 @@ button{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   margin-top: 2px;
   margin-bottom: 2px;
+  font-family: 'Digital-7', arial;
+  background-color: black;
 }
 
 span{
   font-size: 35px;
+  color: red;
 }
+
+#buttons{
+  display: flex;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
