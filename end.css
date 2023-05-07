@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Digital-7';
+  src: url(Assets/digital_7/digital-7.ttf) format('truetype');
+}
+
+body{
+  text-align: center;
+  font-family: 'Digital-7', arial;
+  background-color: black;
+  color: red;
+  font-size: 20px;
+}
+

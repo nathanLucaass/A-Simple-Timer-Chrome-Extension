@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
 const countdownEl = document.getElementById('countdown');
 
-const audio = document.getElementById('meuAudio');
+const audio = document.getElementById('audio');
 
 function updateCountdown(countdown) {
   countdownEl.innerText = countdown;
@@ -33,4 +33,11 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     audio.play();
   }
 });
+
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+  if (request.message === 'isPopupOpen') {
+    sendResponse({popupOpen: true});
+  }
+});
+
 

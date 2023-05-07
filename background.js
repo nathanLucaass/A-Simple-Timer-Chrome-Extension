@@ -29,16 +29,27 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       });
 
       time--;
-
       if (time < 0) {
         clearInterval(countdownInterval);
-        chrome.runtime.sendMessage({
-          message: 'updateCountdown',
-          countdown: 'END',
-        });
-        chrome.runtime.sendMessage({
-          message: 'playSound',
-        });
+
+        chrome.runtime
+            .sendMessage({message: 'isPopupOpen'}, function(response) {
+              if (response && response.popupOpen) {
+                chrome.runtime.sendMessage({
+                  message: 'updateCountdown',
+                  countdown: 'END',
+                });
+                chrome.runtime.sendMessage({
+                  message: 'playSound',
+                });
+              } else {
+                chrome.windows.create({
+                  url: 'end.html',
+                  type: 'popup',
+                  width: 300,
+                  height: 100});
+              }
+            });
       }
     }, 1000);
   }
