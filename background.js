@@ -1,12 +1,5 @@
+/* eslint-disable require-jsdoc */
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-  let countdownInterval;
-
-  chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-    if (request.message === 'startTimer') {
-      // Resetar a aplicação antes de iniciar o timer
-      resetApplication();
-    }
-  });
   if (request.message === 'startTimer') {
     let reqHours = parseInt(request.hours);
     let reqMinutes = parseInt(request.minutes);
@@ -21,12 +14,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
       reqSeconds = 0;
     }
 
-    let time = (reqSeconds + (reqMinutes * 60) + (reqHours * 3600 ));
+    let time = reqSeconds + reqMinutes * 60 + reqHours * 3600;
 
     countdownInterval = setInterval(function() {
       const hours = Math.floor(time / 3600).toString().padStart(2, '0');
-      const minutes = Math
-          .floor((time % 3600) / 60).toString().padStart(2, '0');
+      const minutes = Math.floor((time % 3600) / 60)
+          .toString()
+          .padStart(2, '0');
       const seconds = (time % 60).toString().padStart(2, '0');
 
       chrome.runtime.sendMessage({
@@ -36,11 +30,14 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
       time--;
 
-      if (time <= 0) {
+      if (time < 0) {
         clearInterval(countdownInterval);
         chrome.runtime.sendMessage({
           message: 'updateCountdown',
-          countdown: 'Vai tomar no cu',
+          countdown: 'END',
+        });
+        chrome.runtime.sendMessage({
+          message: 'playSound',
         });
       }
     }, 1000);

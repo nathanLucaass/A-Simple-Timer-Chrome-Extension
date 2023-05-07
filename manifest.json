@@ -1,14 +1,14 @@
 {
   "name": "Timer",
   "description": "A simple timer",
-  "version": "1.8",
+  "version": "1.9",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting", "background", "tabs"],
+  "permissions": ["activeTab", "scripting", "background", "tabs", "windows"],
   "background": {
     "service_worker": "background.js"
   },  
   "action": {
     "default_popup": "index.html",
-    "default_icon": "3eab57da-d241-4a05-afb9-2719a6f8880e-removebg-preview.png"
+    "default_icon": "Assets/icon.png"
   }
 }

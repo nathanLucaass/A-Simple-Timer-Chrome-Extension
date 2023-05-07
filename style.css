@@ -1,4 +1,7 @@
-@import url(https://allfont.net/allfont.css?fonts=digital-7);
+@font-face {
+  font-family: 'Digital-7';
+  src: url(Assets/digital_7/digital-7.ttf) format('truetype');
+}
 
 body{
   text-align: center;
@@ -12,18 +15,23 @@ label{
 
 input{
   margin: 1px;
-  text-align: right;
+  text-align: center;
   size: 30px;
   border: 0 none;
   background-color: black;
   width: 30px;
   height: 20px;
   font-size: large;
-  text-align: right;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   font-family: 'Digital-7', arial;
   color: greenyellow;
 }
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 
 label{
   display: flex;
