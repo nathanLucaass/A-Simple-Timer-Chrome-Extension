@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../style/style.css"/>
+</head>
+<body>
+  <form action="">
+    <label for="">
+    <div id="inputs">
+      <input type="number" placeholder="HH"  id="hours-value" oninput="limitInput(this)">
+      <input type="number" placeholder="MM"  id="minutes-value" oninput="limitInput(this)">
+      <input type="number" placeholder="SS"  id="seconds-value" oninput="limitInput(this)">
+    </div>
+    <div id="buttons">
+      <button id="start-button">Start</button>
+      <button id="reset-button">Reset</button>
+    </div>
+    </label>
+  </form>
+  <audio id="audio" src="../Assets/alarm.mp3"></audio>
+  <span id="countdown">00:00:00</span>
+</body>
+<script src="../popup.js" type="module"></script>
+</html>

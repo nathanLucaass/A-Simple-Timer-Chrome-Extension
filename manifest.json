@@ -8,7 +8,7 @@
     "service_worker": "background.js"
   },  
   "action": {
-    "default_popup": "index.html",
-    "default_icon": "Assets/icon.png"
+    "default_popup": "./pages/index.html",
+    "default_icon": "./Assets/icon.png"
   }
 }

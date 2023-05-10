@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
                 });
               } else {
                 chrome.windows.create({
-                  url: 'end.html',
+                  url: './pages/end.html',
                   type: 'popup',
                   width: 300,
                   height: 100});

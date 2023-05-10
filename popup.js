@@ -40,4 +40,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   }
 });
 
+function limitInput(element) {
+  if (element.value.length > 2) {
+    element.value = element.value.slice(0, 2);
+  }
+}
 
