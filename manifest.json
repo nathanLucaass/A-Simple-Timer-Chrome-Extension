@@ -3,7 +3,7 @@
   "description": "A simple timer",
   "version": "1.9",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting", "background", "tabs", "windows"],
+  "permissions": ["background", "windows"],
   "background": {
     "service_worker": "background.js"
   },  
